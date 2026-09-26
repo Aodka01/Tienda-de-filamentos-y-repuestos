@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Filan | Filamentos que siguen tu ritmo</title>
+    <meta name="description" content="Filamentos 3D de alto rendimiento y repuestos para makers en República Dominicana.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="{% static 'css/site.css' %}">
+    <link rel="stylesheet" href="{% static 'css/overrides.css' %}?v=3">
+</head>
+<body>
+    <div class="announcement"><span>ENVÍOS A TODO RD</span><span>·</span><span>FILAMENTO DE ALTO RENDIMIENTO</span><span>·</span><span>COMPRA LOCAL, CREA SIN PAUSA</span></div>
+    <header class="site-header">
+        <a class="brand" href="#top" aria-label="Filan inicio"><img src="{% static 'img/filan-logo.png' %}" alt="Filan"></a>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <a href="#filamentos">Filamentos</a><a href="#repuestos">Repuestos</a><a href="#historia">La marca</a>
+        </nav>
+        <div class="header-actions"><button class="icon-button search-toggle" aria-label="Buscar productos" aria-expanded="false"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 5 5"></path></svg></button><button class="cart-button" data-cart-open aria-label="Abrir carrito"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 8H7"></path><circle cx="10" cy="20" r="1.3"></circle><circle cx="18" cy="20" r="1.3"></circle></svg><span>Carrito</span><b id="cart-count">0</b></button><button class="menu-button" aria-label="Abrir menú"><span></span><span></span></button></div>
+    </header>
+    <div class="search-panel" aria-hidden="true"><label for="product-search">Buscar en Filan</label><div class="search-input-wrap"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="6.5"></circle><path d="m16 16 5 5"></path></svg><input id="product-search" type="search" placeholder="Color, PLA, boquilla, cama..." autocomplete="off"><button class="search-close" aria-label="Cerrar búsqueda">×</button></div><p class="search-hint">Busca por material, color, código o pieza de tu máquina.</p><div class="search-results" id="search-results" aria-live="polite"></div></div>
+
+    <main id="top">
+        <section class="hero-section">
+            <div class="hero-copy">
+                <p class="eyebrow"><span class="eyebrow-dot"></span> NUEVA LÍNEA · 2025</p>
+                <h1>Color que<br><em>se mueve.</em></h1>
+                <p class="hero-text">Filamentos diseñados para que tus ideas salgan de la pantalla y aterricen con carácter.</p>
+                <div class="hero-actions"><a class="button button-dark" href="#filamentos">Explorar filamentos <span>↗</span></a><a class="text-link" href="#historia">Por qué Filan <span>↓</span></a></div>
+            </div>
+            <div class="hero-art" aria-label="Bobina de filamento Filan en color turquesa">
+                <div class="art-label">FILAN / 01<br><span>PLA MATTE</span></div>
+                <div class="spool spool-hero"><div class="spool-side"></div><div class="spool-ring"><span></span></div><div class="spool-hole"></div></div>
+                <div class="hero-note"><span class="note-line"></span><strong>190–220 °C</strong><small>TEMPERATURA<br>DE BOQUILLA</small></div>
+                <div class="hero-stamp">1 KG<br><small>NETO</small></div>
+            </div>
+            <div class="hero-index"><span>01</span><span class="index-line"></span><span>03</span></div>
+        </section>
+
+        <section class="marquee" aria-label="Especificaciones Filan"><div>PREMIUM QUALITY <span>✦</span> PRINT SPEED 30–70 MM/S <span>✦</span> MADE FOR MAKERS <span>✦</span> PREMIUM QUALITY <span>✦</span> PRINT SPEED 30–70 MM/S</div></section>
+
+        <section class="collection-section" id="filamentos">
+            <div class="section-heading"><div><p class="eyebrow">01 / MATERIALES</p><h2>Tu próxima pieza<br><em>empieza aquí.</em></h2></div><p class="section-intro">Del primer prototipo a la pieza final. Una paleta precisa, tres acabados y la consistencia que tu impresora necesita.</p></div>
+            <div class="collection-grid">
+                <a class="collection-card teal-card" href="#catalogo"><div class="card-top"><span>01</span><span>PLA / MATTE</span></div><div class="card-art"><div class="line-art teal-lines"></div></div><div class="card-bottom"><div><h3>Matte</h3><p>Superficie suave · Colores densos</p></div><span class="round-arrow">↗</span></div></a>
+                <a class="collection-card red-card" href="#catalogo"><div class="card-top"><span>02</span><span>PETG / TOUGH</span></div><div class="card-art"><div class="line-art red-lines"></div></div><div class="card-bottom"><div><h3>Tough</h3><p>Resistencia real · Uso diario</p></div><span class="round-arrow">↗</span></div></a>
+                <a class="collection-card yellow-card" href="#catalogo"><div class="card-top"><span>03</span><span>PLA / SILK</span></div><div class="card-art"><div class="line-art yellow-lines"></div></div><div class="card-bottom"><div><h3>Silk</h3><p>Brillo intenso · Acabado premium</p></div><span class="round-arrow">↗</span></div></a>
+            </div>
+        </section>
+
+        <section class="catalog-section" id="catalogo">
+            <div class="section-heading catalog-heading"><div><p class="eyebrow">02 / SELECCIÓN FILAN</p><h2>Lo que está<br><em>rodando.</em></h2></div><div class="filter-row" role="group" aria-label="Filtrar productos"><button class="filter is-active" data-filter="all">Todo</button><button class="filter" data-filter="PLA">PLA</button><button class="filter" data-filter="PETG">PETG</button><button class="filter" data-filter="TPU">TPU</button><button class="filter" data-filter="REPUESTOS">Repuestos</button></div></div>
+            <div class="product-grid">
+                {% for product in products %}<article class="product-card" data-type="{{ product.type }}" data-search="{{ product.name }} {{ product.type }} {{ product.color }} {{ product.material }} {{ product.code }} {{ product.description }}" data-name="{{ product.name }}" data-price="{{ product.price }}" data-code="{{ product.code }}" data-color="{{ product.color|default:'Variado' }}" data-material="{{ product.material|default:product.type }}" data-stock="{{ product.stock }}" data-description="{{ product.description }}" data-image="{{ product.image }}"><div class="product-visual tone-{{ product.tone }}">{% if product.image %}<img class="product-image" src="{{ product.image }}" alt="{{ product.name }}">{% else %}<div class="product-spool"><div class="product-spool-hole"></div></div>{% endif %}<span class="product-code">{{ product.code }}</span><span class="product-weight">1 KG</span></div><div class="product-info"><div><p class="product-type">{{ product.type }}</p><h3>{{ product.name }}</h3><p class="stock"><span></span>{{ product.stock }}</p></div><div class="product-buy"><strong>{{ product.price }}</strong><button class="add-button" data-name="{{ product.name }}" data-price="{{ product.price }}" aria-label="Agregar {{ product.name }} al carrito">+</button></div></div></article>{% endfor %}
+            </div>
+        </section>
+
+        <section class="spares-section" id="repuestos">
+            <div class="section-heading"><div><p class="eyebrow">03 / REPUESTOS</p><h2>Tu máquina,<br><em>siempre lista.</em></h2></div><p class="section-intro">Piezas básicas para mantener tu impresora afinada, limpia y lista para la siguiente impresión.</p></div>
+            <div class="spares-grid">
+                {% if spare_products %}{% for product in spare_products %}<article class="spare-card" data-type="REPUESTOS" data-search="{{ product.name }} {{ product.type }} {{ product.color }} {{ product.material }} {{ product.code }} {{ product.description }}" data-name="{{ product.name }}" data-price="{{ product.price }}" data-code="{{ product.code }}" data-color="{{ product.color|default:'Variado' }}" data-material="{{ product.material|default:'Pieza de máquina' }}" data-stock="{{ product.stock }}" data-description="{{ product.description }}" data-image="{{ product.image }}"><div class="spare-visual tone-{{ product.tone }}">{% if product.image %}<img class="spare-image" src="{{ product.image }}" alt="{{ product.name }}">{% else %}<div class="hotend-shape"></div>{% endif %}<span class="spare-label">{{ product.code }}</span></div><div class="spare-info"><div><p>REPUESTO FILAN</p><h3>{{ product.name }}</h3></div><div class="spare-buy"><strong>{{ product.price }}</strong><button class="add-button" data-name="{{ product.name }}" data-price="{{ product.price }}" aria-label="Agregar {{ product.name }} al carrito">+</button></div></div></article>{% endfor %}{% else %}
+                <article class="spare-card spare-bed"><div class="spare-visual"><span class="spare-label">PLACA PEI</span><div class="bed-shape"><i></i><i></i><i></i></div></div><div class="spare-info"><div><p>SUPERFICIE DE IMPRESIÓN</p><h3>Cama magnética PEI</h3></div><div class="spare-buy"><strong>RD$ 2,490</strong><button class="add-button" data-name="Cama magnética PEI" data-price="RD$ 2,490" aria-label="Agregar Cama magnética PEI al carrito">+</button></div></div></article>
+                <article class="spare-card spare-nozzle"><div class="spare-visual"><span class="spare-label">0.4 MM / LATÓN</span><div class="nozzle-shape"></div></div><div class="spare-info"><div><p>EXTRUSIÓN</p><h3>Boquilla de latón</h3></div><div class="spare-buy"><strong>RD$ 390</strong><button class="add-button" data-name="Boquilla de latón 0.4 mm" data-price="RD$ 390" aria-label="Agregar Boquilla de latón al carrito">+</button></div></div></article>
+                <article class="spare-card spare-hotend"><div class="spare-visual"><span class="spare-label">ALL METAL</span><div class="hotend-shape"><i></i><i></i><i></i></div></div><div class="spare-info"><div><p>HOTEND</p><h3>Kit hotend universal</h3></div><div class="spare-buy"><strong>RD$ 1,290</strong><button class="add-button" data-name="Kit hotend universal" data-price="RD$ 1,290" aria-label="Agregar Kit hotend universal al carrito">+</button></div></div></article>
+                <article class="spare-card spare-tube"><div class="spare-visual"><span class="spare-label">PTFE / 1 M</span><div class="tube-shape"><i></i><i></i></div></div><div class="spare-info"><div><p>GUIADO DE FILAMENTO</p><h3>Tubo Bowden PTFE</h3></div><div class="spare-buy"><strong>RD$ 290</strong><button class="add-button" data-name="Tubo Bowden PTFE" data-price="RD$ 290" aria-label="Agregar Tubo Bowden PTFE al carrito">+</button></div></div></article>
+                {% endif %}
+            </div>
+            <a class="spares-link" href="#top">Ver todos los repuestos <span>↗</span></a>
+        </section>
+
+        <section class="manifesto-section" id="historia"><div class="manifesto-number">03</div><div class="manifesto-copy"><p class="eyebrow">LA DIFERENCIA FILAN</p><h2>Hecho para<br><em>seguir creando.</em></h2><p>Creemos que el material no debe ser el límite. Por eso cuidamos cada milímetro: diámetro estable, color honesto y cajas que vuelven a la tierra.</p><a class="button button-light" href="mailto:iaffsuplygroup@outlook.com">Hablemos de tu proyecto <span>↗</span></a></div><div class="manifesto-specs"><div><strong>± 0.02</strong><small>TOLERANCIA DE DIÁMETRO</small></div><div><strong>190–220°</strong><small>RANGO DE IMPRESIÓN</small></div><div><strong>1 kg</strong><small>PESO NETO REAL</small></div></div></section>
+    </main>
+
+    <footer class="site-footer"><div class="footer-brand"><a class="brand" href="#top"><img src="{% static 'img/filan-logo.png' %}" alt="Filan"></a><p>Material para ideas<br>que no se quedan quietas.</p></div><div class="footer-links"><div><p>EXPLORA</p><a href="#filamentos">Filamentos</a><a href="#repuestos">Repuestos</a><a href="#historia">La marca</a></div><div><p>CONTACTO</p><a href="mailto:iaffsuplygroup@outlook.com">iaffsuplygroup@outlook.com</a><a href="#top">@iaffsupply</a><a href="#top">Santo Domingo, RD</a></div></div><div class="social-footer"><h2>Nuestras redes sociales:</h2><div class="social-links"><a href="{{ social_links.facebook }}" target="_blank" rel="noreferrer" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M14 8h3V4h-3c-3.3 0-5 2-5 5v3H6v4h3v6h4v-6h3l1-4h-4V9c0-.7.3-1 1-1Z"/></svg></a><a href="{{ social_links.instagram }}" target="_blank" rel="noreferrer" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a><a href="{{ social_links.linkedin }}" target="_blank" rel="noreferrer" aria-label="LinkedIn"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="1"/><path d="M7 10v7M7 7v.1M11 17v-4a2 2 0 0 1 4 0v4M11 10v7"/></svg></a><a href="{{ social_links.tiktok }}" target="_blank" rel="noreferrer" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M14 4v10.5a3.5 3.5 0 1 1-3-3.46M14 4c.7 2.1 2.1 3.3 4 3.5"/></svg></a><a href="{{ social_links.whatsapp }}" target="_blank" rel="noreferrer" aria-label="WhatsApp"><svg viewBox="0 0 24 24"><path d="M20 11.5a8 8 0 0 1-11.8 7L4 20l1.5-4.1A8 8 0 1 1 20 11.5Z"/><path d="M9 8.5c.3 2 1.5 3.5 3.5 4.5.7.3 1.4.2 1.8-.4l.5-.7"/></svg></a></div></div><div class="footer-bottom"><span>© 2025 FILAN / IAFF SUPLY GROUP, SRL.</span><span>HECHO PARA IMPRIMIR MEJOR.</span></div></footer>
+
+    <aside class="cart-drawer" aria-label="Carrito de compras" aria-hidden="true"><div class="cart-header"><span>Tu carrito</span><button class="close-cart" data-cart-close aria-label="Cerrar carrito">×</button></div><div class="cart-items" id="cart-items"><div class="empty-cart"><span>＋</span><p>Tu carrito está esperando<br>una buena idea.</p></div></div><div class="cart-footer"><div><span>Total estimado</span><strong id="cart-total">RD$ 0</strong></div><button class="button button-dark checkout-button">Continuar al pago <span>↗</span></button></div></aside><button class="floating-cart" data-cart-open aria-label="Abrir carrito"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 4h2l2.2 10.2a2 2 0 0 0 2 1.6h7.7a2 2 0 0 0 1.9-1.4L21 8H7"></path><circle cx="10" cy="20" r="1.3"></circle><circle cx="18" cy="20" r="1.3"></circle></svg><b id="floating-cart-count">0</b></button><div class="product-modal" aria-hidden="true"><div class="modal-backdrop" data-modal-close></div><div class="modal-card"><button class="modal-close" data-modal-close aria-label="Cerrar detalle">×</button><div class="modal-visual" id="modal-visual"></div><div class="modal-content"><p class="eyebrow">DETALLE DEL PRODUCTO</p><p class="modal-type" id="modal-type"></p><h2 id="modal-name"></h2><p class="modal-description" id="modal-description"></p><div class="modal-specs"><div><span>Material</span><strong id="modal-material"></strong></div><div><span>Color</span><strong id="modal-color"></strong></div><div><span>Código</span><strong id="modal-code"></strong></div><div><span>Disponibilidad</span><strong id="modal-stock"></strong></div></div><div class="modal-buy"><strong id="modal-price"></strong><button class="button button-dark" id="modal-add">Agregar al carrito <span>+</span></button></div></div></div></div><div class="drawer-overlay" data-cart-close></div><div class="toast" role="status">Añadido a tu carrito</div>
+    <script src="{% static 'js/site.js' %}"></script>
+</body>
+</html>
